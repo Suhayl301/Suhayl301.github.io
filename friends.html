@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Friends</title>
+  <style>
+    .row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 300px;
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-family: Didot, sans-serif;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+      background-color: #bbb;
+      color: black;
+    }
+
+    .flip-card-back {
+      background-color: #E3BC9A;
+      color: black;
+      transform: rotateY(180deg);
+    }
+
+    body {
+      background-image: url('download/background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* CSS styling for the side navigation bar */
+    .sidebar {
+      width: 50px;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #F9F5E7;
+      padding: 20px;
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(0);
+    }
+
+    /* CSS styling for the navigation links */
+    .sidebar a {
+      display: block;
+      margin-bottom: 10px;
+      text-decoration: none;
+      color: #555555;
+      font-family: "lazydog", cursive;
+    }
+
+    /* CSS styling for the header */
+    h1 {
+      font-family: "wedges", cursive;
+    }
+
+    /* CSS styling for the header */
+    h2 {
+      font-family: "wedges", cursive;
+    }
+
+    .video-container {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar" id="sidebar">
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <a href="index.html">Home</a>
+    <br>
+    <a href="about.html">About</a>
+    <br>
+    <a href="family.html">Family</a>
+    <br>
+    <a href="friends.html">Friends</a>
+    <br>
+    <a href="gallery.html">Gallery</a>
+  </div>
+
+  <h1 align="center">My Friends</h1>
+  <h2 align="center">Flip the card</h2>
+  <div class="row">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="image/boys.jpg" alt="Avatar" style="width:300px;height:300px;">
+</div>
+<div class="flip-card-back">
+<h2>My Boys</h2>
+<p>This is friends from college</p>
+<p>They are the best person I could ever ask</p>
+</div>
+</div>
+</div>
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<img src="image/kim110.jpg" alt="Avatar" style="width:300px;height:300px;">
+</div>
+<div class="flip-card-back">
+<h2>My Fav Classmate</h2>
+<p>These are my classmates</p>
+<p>They are the best classmates I ever had</p>
+<p>I am grateful to meet each one of them</p>
+</div>
+</div>
+</div>
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<img src="image/lyfers.jpg" alt="Avatar" style="width:300px;height:300px;">
+</div>
+<div class="flip-card-back">
+<h2>My 4lyfers</h2>
+<p>These are my best friends</p>
+<p>They always be there for me</p>
+<p>They also always scold me but I do love them</p>
+</div>
+</div>
+</div>
+
+  </div>
+  <div class="row">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="image/pijul.jpg" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+          <h2>My Roommate & Classmate aka my best man</h2>
+          <p>They are the best I could ask for</p>
+          <p>They are a bit annoying sometimes but I still love them</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <h3 align="center">Appreciation Post</h3>
+  <p align="center">I am very grateful to meet each of my friends, either high school friends or college friends.</p>
+  <p align="center">Thankyou for everything that you guys has ever done for me.</p>
+ <p align="center">Hoping the best for all of us in the future</p>
+ <p align="center">Thank you and Love you guys!</p>
+  <div class="video-container">
+    <table align="center">
+      <tr>
+        <td>
+          <video src="video/memories.MOV" controls width="auto" height="500px" hspace="12" vspace="12"></video>
+        </td>
+        <td>
+          <video src="video/beach.Mp4" controls width="auto" height="500px" hspace="12" vspace="12"></video>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

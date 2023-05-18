@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Gallery</title>
+  <style>
+    body {
+      background-image: url('download/background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* CSS styling for the side navigation bar */
+    .sidebar {
+      width: 50px;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #F9F5E7;
+      padding: 20px;
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(0);
+    }
+
+    /* CSS styling for the navigation links */
+    .sidebar a {
+      display: block;
+      margin-bottom: 10px;
+      text-decoration: none;
+      color: #555555;
+      font-family: "lazydog", cursive;
+    }
+
+    /* CSS styling for the header */
+    h1 {
+      font-family: "wedges", cursive;
+      color: black;
+    }
+
+    /* CSS styling for the slideshow */
+    .slideshow-container {
+      max-width: 800px;
+      position: relative;
+      margin: auto;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    /* CSS styling for the audio player */
+    .audio-player {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* CSS styling for the audio controls */
+    .audio-controls {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar" id="sidebar">
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <a href="index.html">Home</a>
+    <br>
+    <a href="about.html">About</a>
+    <br>
+    <a href="family.html">Family</a>
+    <br>
+    <a href="friends.html">Friends</a>
+    <br>
+    <a href="gallery.html">Gallery</a>
+  </div>
+
+  <h1 align="center">Welcome to My Gallery</h1>
+
+  <div class="slideshow-container">
+    <div class="mySlides">
+      <img src="image/collage.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="image/family.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="image/umi.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="image/out.jpg" style="width:100%">
+    </div>
+
+     <div class="mySlides">
+      <img src="image/fam.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="image/den.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="image/ampang.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="image/class.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="image/kika.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="image/amni.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="image/twin.jpg" style="width:100%">
+    </div>
+
+    <!-- Navigation buttons for slideshow -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <div class="audio-player">
+    <audio controls>
+      <source src="sound/keshi.mp3" type="audio/mp3">
+    </audio>
+  </div>
+
+  <script>
+    // JavaScript for slideshow functionality
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) {
+       
+slideIndex = 1;
+}
+if (n < 1) {
+slideIndex = slides.length;
+}
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";
+}
+slides[slideIndex - 1].style.display = "block";
+}
+</script>
+
+</body>
+</html>
